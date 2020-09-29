@@ -1,7 +1,9 @@
 package com.urlshortener;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
+@Entity(name = "urls")
 public class Url {
 
     @Id

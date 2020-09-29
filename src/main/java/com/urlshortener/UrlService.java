@@ -2,10 +2,12 @@ package com.urlshortener;
 
 import com.google.common.hash.Hashing;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
+@Service
 public class UrlService {
 
     @Autowired
@@ -16,9 +18,9 @@ public class UrlService {
        Optional<Url> urlOptional = urlRepository.findById(id);
 
        if(urlOptional.isPresent()){
-           return urlOptional.toString();
+           return urlOptional.get().getUrl();
        }else {
-           return "";
+           return "URL does not exist";
        }
     }
 
