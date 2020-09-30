@@ -25,6 +25,6 @@ $('.form-shortener').on("submit", function (e){
     }
 });
 
-$("#input-url").focus(function (){
+$("#input-url").on("input", function (){
     $("#shorten-button").html("Shorten");
 });
