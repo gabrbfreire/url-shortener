@@ -13,7 +13,7 @@ $('.form-shortener').on("submit", function (e){
                         $("#fail-p").html(data);
                     }else{
                         $("#fail-p").html("");
-                        $("#input-url").val("/g/"+data);
+                        $("#input-url").val("lshrt.herokuapp.com/g/"+data);
                         $("#shorten-button").html("Copy");
                     }
                 }
