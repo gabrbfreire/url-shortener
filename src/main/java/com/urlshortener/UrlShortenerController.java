@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
 public class UrlShortenerController {
@@ -12,16 +13,18 @@ public class UrlShortenerController {
     @Autowired
     private UrlService urlService;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<String> getShortUrl(@PathVariable() String id){
+    @GetMapping("/g/{id}")
+    public RedirectView getShortUrl(@PathVariable() String id){
         try {
-            return new ResponseEntity<String>(urlService.getShortUrl(id), HttpStatus.OK);
+            RedirectView redirectView = new RedirectView();
+            redirectView.setUrl(urlService.getShortUrl(id));
+            return redirectView;
         }catch (Exception e){
-            return new ResponseEntity<String>("", HttpStatus.INTERNAL_SERVER_ERROR);
+            return null;
         }
     }
 
-    @PostMapping("")
+    @PostMapping("/create")
     public ResponseEntity<String> createShortUrl(@RequestParam("url") String url){
 
         try{

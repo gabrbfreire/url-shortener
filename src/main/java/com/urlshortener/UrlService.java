@@ -20,7 +20,7 @@ public class UrlService {
        if(urlOptional.isPresent()){
            return urlOptional.get().getUrl();
        }else {
-           return "URL does not exist";
+           return "URL-does-not-exist";
        }
     }
 
