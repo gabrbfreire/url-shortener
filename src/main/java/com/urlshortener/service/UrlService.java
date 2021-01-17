@@ -1,6 +1,8 @@
-package com.urlshortener;
+package com.urlshortener.service;
 
 import com.google.common.hash.Hashing;
+import com.urlshortener.model.Url;
+import com.urlshortener.repository.UrlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

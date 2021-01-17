@@ -1,4 +1,4 @@
-package com.urlshortener;
+package com.urlshortener.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

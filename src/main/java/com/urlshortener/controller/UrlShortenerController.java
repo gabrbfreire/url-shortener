@@ -1,5 +1,6 @@
-package com.urlshortener;
+package com.urlshortener.controller;
 
+import com.urlshortener.service.UrlService;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
