@@ -1,6 +1,6 @@
 package com.urlshortener.controller.dto;
 
-public class UrlDto {
+public class UrlShortDto {
 
     private String id;
 

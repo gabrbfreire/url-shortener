@@ -2,9 +2,9 @@ package com.urlshortener.controller.form;
 
 import org.hibernate.validator.constraints.URL;
 
-public class UrlForm {
+public class UrlLongForm {
 
-    @URL(protocol = "http")
+    @URL
     private String url;
 
     public String getUrl() {
