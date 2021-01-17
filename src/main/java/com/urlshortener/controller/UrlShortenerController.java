@@ -22,7 +22,7 @@ public class UrlShortenerController {
             RedirectView redirectView = new RedirectView();
             redirectView.setUrl(urlService.getShortUrl(id));
             if(urlService.getShortUrl(id) == "urlNotFound"){
-                redirectView.setUrl("http://localhost:8080");
+                redirectView.setUrl("https://lshrt.herokuapp.com");
             }
             return redirectView;
         }catch (Exception e){
